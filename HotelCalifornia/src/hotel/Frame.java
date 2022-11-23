@@ -1,6 +1,8 @@
 package hotel;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Frame extends JFrame{
 
@@ -15,7 +17,6 @@ public class Frame extends JFrame{
  	  setResizable(false);
  	  setLocationRelativeTo(null);
  	 
- 	  
  	  this.add(new Panel());
 	}
 }

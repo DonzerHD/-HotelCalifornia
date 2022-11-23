@@ -15,7 +15,7 @@ public class Hotel {
         	tbO[3] = new Option("Cabine Douche,Télévision.");
         	tbO[4] = new Option("WC,Cabine Douche,Télévision.");
         	tbO[5] = new Option("WC,Salle de bain + Douche,Télévision.");
-        	tbO[6] = new Option("2 pièces,OSalle de bain + douche,WC,Télévision.");
+        	tbO[6] = new Option("2 pièces,Salle de bain + douche,WC,Télévision.");
         	
         	tbCh = new Chambre[11];
         	tbCh[0] = new Chambre(0, 0, 0, true,tbO[0],0);

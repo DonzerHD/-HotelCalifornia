@@ -2,17 +2,22 @@ package hotel;
 
 import java.util.Scanner;
 
-import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 public class Main {
       public static void main(String[] args) {
     	  
-    	  
-    	   // Application
-    	  JFrame frame = new JFrame("Application Hotel");
-    	  frame.setVisible(true);
-    	  frame.setSize(1200, 700);
-    	  
+    	  SwingUtilities.invokeLater(new Runnable() {
+		     public void run() {
+			    new Frame("Hotel Application");
+             
+				
+			}
+		});
+    	    	  
+       
+  	  
+    	  // Run code
     	  Scanner sc = new Scanner(System.in);
     	  
     	  Hotel hotel = new Hotel();

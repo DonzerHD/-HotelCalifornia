@@ -1,14 +1,18 @@
 package hotel;
 
+import java.util.Scanner;
+
 public class Main {
       public static void main(String[] args) {
     	  
-		   System.out.println("Bienvenue à Hotel-Carlifornia");
-		   System.out.println("Reservation de la chambre");
-		   System.out.print("Combien de personnes ?");
-		   
-		   
-		   Chambre chambre = new Chambre();
-		   chambre.Réservation();
-	}
+    	  Scanner sc = new Scanner(System.in);
+    	  
+    	  Hotel hotel = new Hotel();
+    	  
+    	  System.out.println("☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠");
+    	  System.out.println("Bienvenido al hotel de la muerte");
+    	  System.out.println("☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠");
+    	  hotel.Question();
+    	  
+      }
 }

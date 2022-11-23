@@ -52,15 +52,23 @@ public class Hotel {
         
             public void AffichageChambreDisponible() {
               for(int i=1 ; i < tbCh.length; i++){
+            	  StringBuilder b = new StringBuilder();
+        		  b.append("Chambre n° ");
+        		  b.append(tbCh[i].chambreNumero);
+        		  b.append("| Capacité accueil : ");
+        		  b.append(tbCh[i].capaciteAccueil);
+        		  b.append("| personnes et l'option : " );
+        		  b.append(tbCh[i].AffichageOption().getOption());
+        		  b.append(" |prix : ");
+        		  b.append(tbCh[i].prix);
+        		  b.append("€ | Disponibilité : Chambre ");
             	  if (tbCh[i].disponible) {
-            		  System.out.println("---------------------------------------------------------------------------------------------------------------------------");
-            		  System.out.println("Chambre n° " + tbCh[i].chambreNumero + "| Capacité accueil : " + tbCh[i].capaciteAccueil + 
-            	      "| personnes et l'option : " + tbCh[i].AffichageOption().getOption()  + "|prix : " + tbCh[i].prix + "€ | Disponibilité : Chambre dispo 👌 .");
+            		  System.out.print(b);
+            		  System.out.println("dispo 👌 .");
             	  }else {
-            		  System.out.println("---------------------------------------------------------------------------------------------------------------------------");
-            		  System.out.println("Chambre n° " + tbCh[i].chambreNumero + "| Capacité accueil :" + tbCh[i].capaciteAccueil + 
-                    	      "| personnes et l'option : " + tbCh[i].AffichageOption().getOption() + "|prix : " + tbCh[i].prix + "€ | Disponibilité : Chambre non dispo.");
-     
+            		  System.out.print(b);
+            		  System.out.println("Non dispo .");
+            		 
             	  }
               }
               RéservationChambre();
@@ -72,10 +80,16 @@ public class Hotel {
             	int chambreNumero = sc.nextInt();
             	for(int i=1 ; i < tbCh.length; i++){
             	if (chambreNumero == tbCh[i].chambreNumero ) {
-            		tbCh[chambreNumero].disponible = false;
+            		if(tbCh[chambreNumero].disponible == true) {
+            	    tbCh[chambreNumero].disponible = false;
             		System.out.println("Chambre n°" + tbCh[chambreNumero].chambreNumero + " réservé .");
             		Question();
+            		} else{
+            			System.out.println("Chambre déja réservé");
+            			RéservationChambre();
+            		}
             	}
+            
             	}
             	
             
